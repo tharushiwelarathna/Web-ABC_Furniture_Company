@@ -1,0 +1,147 @@
+/*----------------------------------------------------------------------------------------------
+ *Copyright(C) GDSE-55-56-Gang. All rights reserved.
+ *Licensed under the MIT License. See License, txt in the project root for license information.
+ *---------------------------------------------------------------------------------------------*/
+
+/** 
+ *@author Tharushi Welarathna <nirmanitharushi1@gmail.com> 
+ *@since 10/8/2021
+ */
+
+/*header*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Roboto', sans-seri;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+header {
+    overflow: hidden;
+    position: fixed;
+    background:white;
+    height: 50px;
+    z-index: 1;
+    display: flex;
+    backdrop-filter: blur(22px);
+    width: 100%;
+}
+
+header:nth-child(1) > :nth-child(1) {
+    height: 100%;
+    flex: 1;
+}
+header:nth-child(1) > :nth-child(2) {
+    height: 100%;
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.nav_links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+.nav_links > li > a {
+    text-decoration: none;
+    color: black;
+    padding: 16px 22px 16px 22px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+
+.header-div {
+    display: flex;
+    align-items: center;
+    color: black;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.nav_links > li > a:focus {
+    background: #A2D2FF;
+    padding: 16px 22px 16px 22px;
+}
+
+.nav_links > li {
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+.nav_links > li:hover {
+    box-shadow: 0px 4px 0px -1px rgb(255, 255, 255);
+}
+/*////////////////////////////////////////////////////////////////////////*/
+
+/*home*/
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 40px 10px 40px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.home {
+    position: absolute;
+}
+.info {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 30vh;
+    width: 90vw;
+    color: white;
+    transition: all 0.5s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    /* border: 1px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.profile-pic {
+    position: relative;
+    height: 50rem;
+    width: 200rem;
+    background: url(../img/85-Wyphurst-Road-GU6-Crowes-Cranleigh-2-of-19-1024x684.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
