@@ -670,6 +670,452 @@ header:nth-child(1) > :nth-child(2) {
     cursor: default;
 
 }
+/*//////////////////////BEDS////////////////////////////*/
+.bedShowRoom{
+    height: 1000px;
+    background-color: #F6F6F6;
+    position: relative;
+
+}
+.Show1{
+    position: absolute;
+    height: 420px;
+    width: 360px;
+    background-color: white;
+    top: 12%;
+    left: 2%;
+
+}
+.Show1:hover {
+    transform: scale(1.00);
+    box-shadow: 1px 2px 7px 4px #bfa0a0d6;
+}
+
+
+.Show2{
+    position: absolute;
+    height: 420px;
+    width: 360px;
+    background-color: white;
+    top: 12%;
+    left: 26%;
+}
+.Show2:hover {
+    transform: scale(1.00);
+    box-shadow: 1px 2px 7px 4px #bfa0a0d6;
+}
+.Show3{
+    position: absolute;
+    height: 420px;
+    width: 360px;
+    background-color: white;
+    top: 12%;
+    left: 50%;
+}
+.Show3:hover {
+    transform: scale(1.00);
+    box-shadow: 1px 2px 7px 4px #bfa0a0d6;
+}
+.Show4{
+    position: absolute;
+    height: 420px;
+    width: 360px;
+    background-color: white;
+    top: 12%;
+    left: 74%;
+}
+.Show4:hover {
+    transform: scale(1.00);
+    box-shadow: 1px 2px 7px 4px #bfa0a0d6;
+}
+
+.Show5{
+    position: absolute;
+    height: 420px;
+    width: 360px;
+    background-color: white;
+    top: 56%;
+    left: 2%;
+
+}
+.Show5:hover {
+    transform: scale(1.00);
+    box-shadow: 1px 2px 7px 4px #bfa0a0d6;
+}
+
+
+.Show6{
+    position: absolute;
+    height: 420px;
+    width: 360px;
+    background-color: white;
+    top: 56%;
+    left: 26%;
+}
+.Show6:hover {
+    transform: scale(1.00);
+    box-shadow: 1px 2px 7px 4px #bfa0a0d6;
+}
+.Show7{
+    position: absolute;
+    height: 420px;
+    width: 360px;
+    background-color: white;
+    top: 56%;
+    left: 50%;
+}
+.Show7:hover {
+    transform: scale(1.00);
+    box-shadow: 1px 2px 7px 4px #bfa0a0d6;
+}
+.Show8{
+    position: absolute;
+    height: 420px;
+    width: 360px;
+    background-color: white;
+    top: 56%;
+    left: 74%;
+}
+.Show8:hover {
+    transform: scale(1.00);
+    box-shadow: 1px 2px 7px 4px #bfa0a0d6;
+}
+.image_border1{
+    position: absolute;
+    z-index: 1;
+    -webkit-filter: drop-shadow(5px 5px 5px #866868);
+    filter: drop-shadow(5px 5px 5px #d0baba);
+}
+.image1{
+    animation: none;
+    display: flex;
+}
+.image_border2{
+    position: absolute;
+    z-index: 1;
+    -webkit-filter: drop-shadow(5px 5px 5px #866868);
+    filter: drop-shadow(5px 5px 5px #d0baba);
+}
+.image2{
+    animation: none;
+}
+.image_border3{
+    position: absolute;
+    z-index: 1;
+    -webkit-filter: drop-shadow(5px 5px 5px #866868);
+    filter: drop-shadow(5px 5px 5px #d0baba);
+}
+.image3{
+    animation: none;
+}
+.image_border4{
+    position: absolute;
+    z-index: 1;
+    -webkit-filter: drop-shadow(5px 5px 5px #866868);
+    filter: drop-shadow(5px 5px 5px #d0baba);
+}
+.image4{
+    animation: none;
+}
+.showText1{
+    position: absolute;
+    top: 115%;
+    left: 24%;
+    color: black;
+    font-size: 21px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: bold;
+    cursor: default;
+}
+.showText2{
+    position: absolute;
+    top: 130%;
+    left: 25%;
+    color: black;
+    font-size: 15px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.showText3{
+    position: absolute;
+    top: 145%;
+    left: 35%;
+    color: #00A19D;
+    font-size: 19px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.showText4{
+    position: absolute;
+    top: 115%;
+    left: 24%;
+    color: black;
+    font-size: 21px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: bold;
+    cursor: default;
+}
+.showText5{
+    position: absolute;
+    top: 130%;
+    left: 25%;
+    color: black;
+    font-size: 15px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.showText6{
+    position: absolute;
+    top: 145%;
+    left: 35%;
+    color: #00A19D;
+    font-size: 19px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.showText7{
+    position: absolute;
+    top: 115%;
+    left: 28%;
+    color: black;
+    font-size: 21px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: bold;
+    cursor: default;
+}
+
+.showText8{
+    position: absolute;
+    top: 130%;
+    left: 26%;
+    color: black;
+    font-size: 15px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.showText9{
+    position: absolute;
+    top: 145%;
+    left: 35%;
+    color: #00A19D;
+    font-size: 19px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.showText10{
+    position: absolute;
+    top: 115%;
+    left: 38%;
+    color: black;
+    font-size: 21px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: bold;
+    cursor: default;
+}
+.showText11{
+    position: absolute;
+    top: 130%;
+    left: 17%;
+    color: black;
+    font-size: 15px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.showText12{
+    position: absolute;
+    top: 145%;
+    left: 35%;
+    color: #00A19D;
+    font-size: 19px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.showText13{
+    position: absolute;
+    top: 70%;
+    left: 39%;
+    color: black;
+    font-size: 21px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: bold;
+    cursor: default;
+}
+
+.showText14{
+    position: absolute;
+    top: 79%;
+    left: 36%;
+    color: #00A19D;
+    font-size: 19px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.showText16{
+    position: absolute;
+    top: 70%;
+    left: 42%;
+    color: black;
+    font-size: 21px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: bold;
+    cursor: default;
+}
+.showText17{
+    position: absolute;
+    top: 80%;
+    left: 15%;
+    color: black;
+    font-size: 16px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.showText18{
+    position: absolute;
+    top: 87%;
+    left: 36%;
+    color: #00A19D;
+    font-size: 19px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.showText19{
+    position: absolute;
+    top: 70%;
+    left: 35%;
+    color: black;
+    font-size: 21px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: bold;
+    cursor: default;
+}
+.showText20{
+    position: absolute;
+    top: 80%;
+    left: 15%;
+    color: black;
+    font-size: 15px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.showText21{
+    position: absolute;
+    top: 87%;
+    left: 36%;
+    color: #00A19D;
+    font-size: 19px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.showText22{
+    position: absolute;
+    top: 70%;
+    left: 34%;
+    color: black;
+    font-size: 21px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: bold;
+    cursor: default;
+}
+.showText23{
+    position: absolute;
+    top: 79%;
+    left: 37%;
+    color: #00A19D;
+    font-size: 19px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.msg{
+    position: absolute;
+    top: 6%;
+    right: 3%;
+    color: black;
+    font-size: 14px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+
+}
+/*////////dropdown//////////////*/
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    top: 3%;
+    left: 2%;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
+
+
 
 /*////////////////////////footer/////////////////////*/
 footer {
