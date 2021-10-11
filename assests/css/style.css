@@ -1,7 +1,3 @@
-/*----------------------------------------------------------------------------------------------
- *Copyright(C) GDSE-55-56-Gang. All rights reserved.
- *Licensed under the MIT License. See License, txt in the project root for license information.
- *---------------------------------------------------------------------------------------------*/
 
 /** 
  *@author Tharushi Welarathna <nirmanitharushi1@gmail.com> 
@@ -89,58 +85,622 @@ header:nth-child(1) > :nth-child(2) {
 .nav_links > li:hover {
     box-shadow: 0px 4px 0px -1px rgb(255, 255, 255);
 }
-/*////////////////////////////////////////////////////////////////////////*/
 
-/*home*/
-
-section {
+/*//////////////home///////////////////*/
+.Home {
+    height: 700px;
+    background-color: white;
     position: relative;
-    width: 100%;
-    height: 100vh;
-    padding: 40px 10px 40px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
 }
-.home {
+
+.homePhoto{
     position: absolute;
+    top: 8%;
+    left: 7%;
 }
-.info {
+
+/*/////////////aboutus//////////////*/
+.aboutUs{
+    height: 700px;
+    background-color: white;
+    position: relative;
+}
+.aboutPhoto{
     position: absolute;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    height: 30vh;
-    width: 90vw;
+    top: 20%;
+    left: 5%;
+
+}
+.about1{
+    position: absolute;
+    top: 20%;
+    left: 53%;
+    color: black;
+    font-size: 17px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.about2{
+    position: absolute;
+    top: 31%;
+    left: 53%;
+    color: black;
+    font-size: 17px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.about3{
+    position: absolute;
+    top: 42%;
+    left: 53%;
+    color: black;
+    font-size: 17px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.about4{
+    position: absolute;
+    top: 55%;
+    left: 53%;
+    color: black;
+    font-size: 17px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.about5{
+    position: absolute;
+    top: 67%;
+    left: 53%;
+    color: black;
+    font-size: 17px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.about6{
+    position: absolute;
+    top: 71%;
+    left: 53%;
+    color: black;
+    font-size: 17px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.about7{
+    position: absolute;
+    top: 75%;
+    left: 53%;
+    color: black;
+    font-size: 17px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+
+
+
+/*//////////contact us//////////////*/
+
+.ContactUs{
+    height: 700px;
+    background-color: white;
+    position: relative;
+}
+
+.NameText{
+    position: absolute;
+    top: 18%;
+    left: 10%;
+    color: darkblue;
+    font-size: 20px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.NameBox{
+    width: 450px;
+    height: 40px;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 2;
+    border: 2px solid darkblue;
+    top: 23%;
+    left: 8%;
+}
+.EmailText{
+    position: absolute;
+    top: 32%;
+    left: 10%;
+    color: darkblue;
+    font-size: 20px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.EmailBox{
+    width: 450px;
+    height: 40px;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 2;
+    border: 2px solid darkblue;
+    top: 37%;
+    left: 8%;
+}
+.SubjectText{
+    position: absolute;
+    top: 46%;
+    left: 10%;
+    color: darkblue;
+    font-size: 20px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+
+}
+.SubjectBox{
+    width: 450px;
+    height: 40px;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 2;
+    border: 2px solid darkblue;
+    top: 51%;
+    left: 8%;
+
+}
+.MessageText{
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    color: darkblue;
+    font-size: 20px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.MessageBox{
+    width: 450px;
+    height: 150px;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 2;
+    border: 2px solid darkblue;
+    top: 65%;
+    left: 8%;
+}
+
+
+
+
+.NameIcon{
+    position: absolute;
+    top: 18%;
+    left: 8%;
+
+
+}
+.EmailIcon{
+    position: absolute;
+    top: 32%;
+    left: 8%;
+
+}
+.MessageIcon{
+    position: absolute;
+    top: 60%;
+    left: 8%;
+
+}
+.SubjectIcon{
+    position: absolute;
+    top: 46%;
+    left: 8%;
+
+}
+
+
+
+.PhoneText{
+    position: absolute;
+    top: 11%;
+    left:35%;
+    color: black;
+    font-size:18px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+
+}
+.TelText{
+    position: absolute;
+    top: 15%;
+    left: 33%;
+    color: black;
+    font-size:20px;
+    font-family:'Arial';
+    font-weight:bold;
+    cursor: default;
+}
+.TelIcon{
+    position: absolute;
+    top: 10%;
+    left: 33%;
+
+}
+.EnvelopeIcon{
+    position: absolute;
+    top: 10%;
+    left: 49%;
+
+}
+.mailText1{
+    position: absolute;
+    top: 11%;
+    left:52%;
+    color: black;
+    font-size:18px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+
+}
+.mailText{
+    position: absolute;
+    top: 15%;
+    left: 45%;
+    color: black;
+    font-size: 20px;
+    font-family: 'Arial';
+    font-weight: bold;
+    cursor: default;
+}
+.address{
+    position: absolute;
+    top: 11%;
+    left:72%;
+    color: black;
+    font-size:18px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+
+}
+.addressText{
+    position: absolute;
+    top: 15%;
+    left: 65%;
+    color: black;
+    font-size: 20px;
+    font-family: 'Arial';
+    font-weight: bold;
+    cursor: default;
+}
+.PlaceIcon{
+    position: absolute;
+    top: 10%;
+    left: 70%;
+
+}
+.location{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+
+}
+.Submit{
+    position: absolute;
+    width: 153px;
+    height: 41px;
+    bottom: 6%;
+    left: 8%;
+    background-color: darkblue;
     color: white;
-    transition: all 0.5s;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-    /* border: 1px solid white; */
-    display: flex;
+    font-family: 'Alef', sans-serif;
+    z-index: 3;
+    font-weight: bold;
+    font-size: 18px;
+    border-color: royalblue;
+
+}
+.Submit:hover{
+    background-color: #56c710;
+    border-color: #56c710;
+}
+/*///////////////////////bedRoomSuite//////////////////*/
+.bedRoom{
+    height: 840px;
+    background-color: white;
+    position: relative;
+
+}
+.bed1{
+    position: absolute;
+    top: 4%;
+    left: 10%;
+}
+.bed2{
+    position: absolute;
+    top: 22%;
+    left: 10%;
+}
+.bed3{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+.bed4{
+    position: absolute;
+    top: 58%;
+    left: 10%;
+}
+.bed5{
+    position: absolute;
+    top: 4%;
+    left: 20%;
+}
+.bedText1{
+    position: absolute;
+    top: 7%;
+    left: 65%;
+    color: black;
+    font-size: 21px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: bold;
+    cursor: default;
+}
+.bedText2{
+    position: absolute;
+    top: 14%;
+    left: 68%;
+    color: black;
+    font-size: 18px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.bedText3{
+    position: absolute;
+    top: 18%;
+    left: 68%;
+    color: black;
+    font-size: 18px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.bedText4{
+    position: absolute;
+    top: 22%;
+    left: 68%;
+    color: black;
+    font-size: 18px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.bedText5{
+    position: absolute;
+    top: 26%;
+    left: 68%;
+    color: black;
+    font-size: 18px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.bedText6{
+    position: absolute;
+    top: 30%;
+    left: 68%;
+    color: black;
+    font-size: 18px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.bedText7{
+    position: absolute;
+    top: 14%;
+    left: 82%;
+    color: #00A19D;
+    font-size: 18px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.bedText8{
+    position: absolute;
+    top: 18%;
+    left: 82%;
+    color: #00A19D;
+    font-size: 18px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.bedText9{
+    position: absolute;
+    top: 22%;
+    left: 82%;
+    color: #00A19D;
+    font-size: 18px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.bedText10{
+    position: absolute;
+    top: 26%;
+    left: 82%;
+    color: #00A19D;
+    font-size: 18px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.bedText11{
+    position: absolute;
+    top: 30%;
+    left: 82%;
+    color: #00A19D;
+    font-size: 18px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.bedText12{
+    position: absolute;
+    top: 37%;
+    left: 65%;
+    color:black;
+    font-size: 18px;
+    word-spacing: 15px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+}
+.a{
+    height: 45px;
+    width: 1300px;
+    background-color: #D5D5D5;
+    position: relative;
+    top:79%;
+    left: 10%;
+    border-color: #16191e;
     align-items: center;
-    justify-content: space-between;
+    display: flex;
+
+}
+.pen{
+    position: absolute;
+    left: 4%;
+
+}
+.bedText13{
+    position: absolute;
+    left: 6%;
+    color: black;
+    font-size: 18px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+
+}
+.b{
+    height: 110px;
+    width: 1300px;
+    background-color: #EDEDED;
+    position: relative;
+    top:80%;
+    left: 10%;
+    border-color: #16191e;
+    display: flex;
+
+}
+.bedText14{
+    position: absolute;
+    top: 5%;
+    left: 4%;
+    color: black;
+    font-size: 18px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: bold;
+    cursor: default;
+
+}
+.bedText15{
+    position: absolute;
+    top: 28%;
+    left: 6%;
+    color: black;
+    font-size: 16px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+
+}
+.bedText16{
+    position: absolute;
+    top: 49%;
+    left: 6%;
+    color: black;
+    font-size: 16px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+
+}
+.bedText17{
+    position: absolute;
+    top: 70%;
+    left: 6%;
+    color: black;
+    font-size: 16px;
+    word-spacing: 5px;
+    font-family: 'Arial';
+    font-weight: normal;
+    cursor: default;
+
 }
 
+/*////////////////////////footer/////////////////////*/
+footer {
+    height: 100px;
+    background: #16191e;
+    display: flex;
+    align-items: center;
+    right: 40%;
+    /*justify-content: center;*/
+}
+.NameIcon1{
+    position: absolute;
+    left: 20%;
+}
+.NameText1{
+    position: absolute;
+    left: 24%;
+}
+.EmailIcon1{
+    position: absolute;
+    left: 45%;
+}
+.EmailText1{
+    position: absolute;
+    left: 49%;
+}
 
-.profile-pic {
-    position: relative;
-    height: 50rem;
-    width: 200rem;
-    background: url(../img/85-Wyphurst-Road-GU6-Crowes-Cranleigh-2-of-19-1024x684.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+footer > h3 {
+    color: white;
+    font-family:'Roboto', sans-seri;
+    left: 30%;
 
 }
 
