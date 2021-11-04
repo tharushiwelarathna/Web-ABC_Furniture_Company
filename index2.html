@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="assests/css/normalize.css">
     <link rel="stylesheet" href="assests/css/style1.css">
+    <link rel="stylesheet" href="assests/css/Login.css">
     <link rel="stylesheet" href="assests/css/responsive.css">
     <meta name="viewport" content="width=device-width initial-scale=1 maximum-scale=2 minimum-scale=1">
 </head>
@@ -27,6 +28,7 @@
                         <li><a class="nav" id="galleryLink" href="#gallery">GALLERY</a></li>
                         <li><a class="nav" id="corLink" href="#corporate enquiry">CORPORATE ENQUIRY</a></li>
                         <li><a class="nav" id="contactLink" href="#contact">CONTACT US</a></li>
+                        <li><a class="nav" id="loginLink" href="#login">LOGIN</a></li>
                     </ul>
                 </nav>
 
@@ -212,7 +214,7 @@
     <div class="bedShow"  id="bedShowRoom">
             <div class="productName">
                 <p class="productText">BEDS</p>
-                <p class="productAddressText" style="margin-left: 33%;">Home > Bedroom > Bedroom Furniture > <b>Beds</b></p>
+                <p class="productAddressText" style="margin-left: 49%;">Home > Bedroom > Bedroom Furniture > <b>Beds</b></p>
             </div>
 
 
@@ -301,6 +303,51 @@
            </div>
 
     </div>
+    <!--Login & Signup Content Start-->
+    <div class="LOGIN" id="login">
+        <div class="container">
+            <div class="user signinBx">
+                <div class="formBx">
+                    <form id="logindata" >
+                        <h1>Sign In</h1>
+                        <input type="text" name="email" id="txtLoginEmail" placeholder="Email" />
+                        <input type="password" name="password" id="txtLoginPassword" placeholder="Password" />
+                        <h6 id="erromsg"></h6>
+                        <input id="loginbtn" type="button"  name="" value="Login" />
+                        <p class="signup">
+                            Don't have an account ?
+                            <a href="#" onclick="toggleForm();">Sign Up.</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+            <div class="user signupBx">
+                <div class="formBx">
+                    <form id="signupdata">
+                        <h1>Create an account</h1>
+
+                        <input type="email" id="signupemail" name="email" placeholder="Email Address"  />
+                        <h6 id="email-error" ></h6>
+                        <input type="text" id="address" name="address" placeholder="Address" />
+
+                        <input type="text" id="contact1" name="contact" placeholder="Contact Number" />
+
+                        <input type="password"   name="password" id="password" placeholder="Create Password" />
+
+                        <input type="password" id="confirmpassword" placeholder="Confirm Password" />
+
+                        <h6 id="error"></h6>
+                        <input id="signup" type="button" name="" value="Sign Up" />
+                        <p class="signup">
+                            Already have an account ?
+                            <a href="#" onclick="toggleForm();">Sign in.</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Login & Signup Content Start-->
 
 
 
@@ -333,6 +380,8 @@
 </section>
 <script src="assests/js/jquery-3.6.0.min.js"></script>
 <script src="controller/HomeController.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="controller/LoginController.js"></script>
 
 
 </body>

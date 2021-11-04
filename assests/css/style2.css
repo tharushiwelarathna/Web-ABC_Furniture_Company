@@ -1,0 +1,223 @@
+/**
+ *@author Tharushi Welarathna <nirmanitharushi1@gmail.com> 
+ *@since 10/18/2021
+ */
+@import url('https://fonts.googleapis.com/css2? family=Poppins:wght@300;400;500;600&display=swap');
+:root{
+    --main-color:#DD2f6e;
+    --color-dark:#1d2231;
+    --text-grey:#8390A2;
+}
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.content, .adminContent {
+    background: #fafafa;
+
+}
+
+.sticky {
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.sticky + main {
+    padding-top: 60px;
+}
+
+#header {
+    height: 80px;
+    box-shadow: 0 4px 10px -3px rgba(191, 191, 191, 0.5);
+
+}
+
+.navbar {
+    height: 80px;
+    background: white;
+    overflow: hidden;
+}
+
+#navSection {
+    box-shadow: 0 4px 10px -3px rgba(191, 191, 191, 0.5);
+
+
+}
+
+.navbar li {
+    font-size: 15px;
+    padding: 10px;
+    text-transform: uppercase;
+    justify-content: space-around;
+
+}
+
+.navbar li .nav-link {
+    color: #8a8a8a;
+}
+
+.navbar li .nav-link:hover {
+    color: #eeb200;
+}
+.search-wrapper {
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+
+}
+.search-wrapper span{
+    display: inline-block;
+    padding: 0rem 1rem;
+    font-size: 1.5rem;
+}
+.search-wrapper input{
+    height: 100%;
+    padding: .5rem;
+    border: none;
+    outline: none;
+}
+
+.user-wrapper{
+    margin-left: 830px;
+    display: flex;
+    align-items: center;
+
+}
+.user-wrapper img{
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    right: 0%;
+
+}
+
+.user-wrapper small{
+    display: inline-block;
+    color: var(--text-grey);
+
+}
+/*......................................Admin DashBoard styling start........................................*/
+
+
+
+.adminContent #v-tabs-dash-tab, #v-tabs-product-tab, #v-tabs-category-tab, #v-tabs-customer-tab, #v-tabs-seller-tab, #v-tabs-chart-tab ,#v-tabs-checkout-tab ,
+#v-tabs-calender-tab,#v-tabs-mail-tab{
+    padding: 26px;
+    font-size: 15px;
+
+    /*text-shadow: #c7c7c7 5px 5px 5px;*/
+    text-shadow: #04009A;
+    background: #04009A;
+
+}
+
+#v-tabs-dash > div > h1, #v-tabs-product > div > h1, #v-tabs-category > div > h1, #v-tabs-customer > div > h1, #v-tabs-seller > div > h1, #v-tabs-chart > div > h1 ,#v-tabs-checkout > div > h1 ,
+#v-tabs-calender > div > h1,#v-tabs-mail > div > h1{
+    text-shadow: #c0c0c0 5px 5px 5px;
+}
+
+#leftDash {
+    padding-right: 0;
+    border-right: 4px solid black;
+    background: #04009A;
+
+}
+
+#c1, #c2, #c3, #c4 {
+    padding: 10px;
+}
+
+#c1 > .card, #c2 > .card, #c3 > .card, #c4 > .card {
+    box-shadow: #e0e0e0 0px 2px 10px;
+}
+
+#c1 > .card {
+    background: #ffa900;
+    border-bottom: 5px #ffa900 solid;
+}
+
+#c2 > .card {
+    background: #00b74a;
+    border-bottom: 5px #00b74a solid;
+}
+
+#c3 > .card {
+    background: #c039e5;
+    border-bottom: 5px #c039e5 solid;
+}
+
+#c4 > .card {
+    background: #1266f1;
+    border-bottom: 5px #1266f1 solid;
+}
+.productTitle{
+    font-family: Dancing Script SemiBold;
+    /*background: #23049D;*/
+    background: #fafafa;
+    box-shadow: #bcbcbc 5px 0px 13px;
+    color: black;
+}
+.categoryTilte{
+    font-family: Dancing Script SemiBold;
+    background: #fafafa;
+    box-shadow: #bcbcbc 5px 0px 13px;
+    color: black;
+}
+
+
+#tblCategory #categoryTbody tr{
+    background: white;
+}
+.control-error {
+    font-size: 12px;
+    color: #d90000;
+}
+
+
+.progress{
+    width: 100%;
+    height: 60%;
+}
+.menu_button {
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.productName{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    background-color: white;
+    color: #5C7AEA;
+
+}
+.productText{
+    color: #5C7AEA;
+    font-size: 15px;
+    margin-left: 0%;
+
+}
+.productName1{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    background-color: white;
+    color: #5C7AEA;
+
+}
+.productText1{
+    color: #5C7AEA;
+    font-size: 15px;
+    margin-left: 0%;
+
+}

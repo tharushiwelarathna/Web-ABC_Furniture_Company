@@ -10,7 +10,8 @@ var homeController = $('#home');
 var AboutController = $('#about');
 var ContactController = $('#contact');
 var BedRoomController = $('#bedRoomSuite');
-var BedController = $('#bedShowRoom')
+var BedController = $('#bedShowRoom');
+var LoginController = $('#login')
 
 
 AboutController.hide();
@@ -18,13 +19,15 @@ homeController.show();
 ContactController.hide();
 BedRoomController.hide();
 BedController.hide();
+LoginController.hide();
 
 $('#aboutLink').click(function () {
     var homeController = $('#home');
     var AboutController = $('#about');
     var ContactController = $('#contact');
     var BedController = $('#bedShowRoom');
-    var BedRoomController = $('#bedRoomSuite')
+    var BedRoomController = $('#bedRoomSuite');
+    var LoginController = $('#login')
 
 
     AboutController.show();
@@ -32,6 +35,7 @@ $('#aboutLink').click(function () {
     ContactController.hide();
     BedRoomController.hide();
     BedController.hide();
+    LoginController.hide();
 
 });
 $('#bedLink').click(function () {
@@ -39,7 +43,8 @@ $('#bedLink').click(function () {
     var AboutController = $('#about');
     var ContactController = $('#contact');
     var BedController = $('#bedShowRoom');
-    var BedRoomController = $('#bedRoomSuite')
+    var BedRoomController = $('#bedRoomSuite');
+    var LoginController = $('#login')
 
 
     BedController.show();
@@ -47,6 +52,7 @@ $('#bedLink').click(function () {
     ContactController.hide();
     BedRoomController.hide();
     AboutController.hide();
+    LoginController.hide();
 
 });
 
@@ -55,7 +61,8 @@ $('#homeLink').click(function () {
     var AboutController = $('#about');
     var ContactController = $('#contact');
     var BedController = $('#bedShowRoom');
-    var BedRoomController = $('#bedRoomSuite')
+    var BedRoomController = $('#bedRoomSuite');
+    var LoginController = $('#login')
 
 
     AboutController.hide();
@@ -63,6 +70,7 @@ $('#homeLink').click(function () {
     ContactController.hide();
     BedRoomController.hide();
     BedController.hide();
+    LoginController.hide();
 
 });
 
@@ -71,7 +79,8 @@ $('#contactLink').click(function () {
     var AboutController = $('#about');
     var ContactController = $('#contact');
     var BedController = $('#bedShowRoom');
-    var BedRoomController = $('#bedRoomSuite')
+    var BedRoomController = $('#bedRoomSuite');
+    var LoginController = $('#login')
 
 
     homeController.hide();
@@ -79,6 +88,7 @@ $('#contactLink').click(function () {
     AboutController.hide();
     BedRoomController.hide();
     BedController.hide();
+    LoginController.hide();
 
 });
 
@@ -87,7 +97,8 @@ $('#bedSuiteLink').click(function () {
     var AboutController = $('#about');
     var ContactController = $('#contact');
     var BedController = $('#bedShowRoom');
-    var BedRoomController = $('#bedRoomSuite')
+    var BedRoomController = $('#bedRoomSuite');
+    var LoginController = $('#login')
 
 
     homeController.hide();
@@ -95,5 +106,23 @@ $('#bedSuiteLink').click(function () {
     AboutController.hide();
     BedRoomController.show();
     BedController.hide();
+    LoginController.hide();
+
+});
+$('#loginLink').click(function () {
+    var homeController = $('#home');
+    var AboutController = $('#about');
+    var ContactController = $('#contact');
+    var BedController = $('#bedShowRoom');
+    var BedRoomController = $('#bedRoomSuite');
+    var LoginController = $('#login')
+
+
+    homeController.hide();
+    ContactController.hide();
+    AboutController.hide();
+    BedRoomController.hide();
+    BedController.hide();
+    LoginController.show();
 
 });

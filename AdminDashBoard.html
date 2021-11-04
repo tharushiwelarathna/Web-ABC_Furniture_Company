@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ABC Company</title>
+    <link rel="stylesheet" href="assests/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assests/css/style2.css">
+    <link href="assests/css/normalize.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet"/>
+    <link href="assests/sweetalert/sweetalert2.min.css" rel="stylesheet">
+    <link href="assests/alertjs/alertify.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <!--
+    FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet"/>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
+
+    <script src="assests/alertjs/alertify.min.js"></script>
+
+<!--    chart-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['bar']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Year', 'Sales', 'Expenses', 'Profit'],
+                ['2017', 1000, 700, 300],
+                ['2018', 1170, 460, 250],
+                ['2019', 660, 1120, -300],
+                ['2020', 1030, 540, 350]
+            ]);
+            var options = {
+                chart: {
+                    title: 'Company Performance',
+                    subtitle: 'Sales, Expenses, and Profit: 2017-2020'
+                }
+            };
+
+            var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+            chart.draw(data, google.charts.Bar.convertOptions(options));
+        }
+    </script>
+
+</head>
+<body onscroll="myFunction()">
+<header id="header" class="d-flex justify-content-center ">
+    <section class="container-fluid  align-items-center " style=" z-index: 999;padding: 0" id="navSection">
+
+        <nav class="navbar navbar-expand-lg navbar-light d-flex ">
+            <div class="container-fluid  ">
+
+                <div class="collapse navbar-collapse  "
+                     id="navbarNavDropdown">
+                    <ul class="nav  ">
+                        <li class="nav-item "><a class="nav-link " aria-current="page" href="index2.html"><i
+                                class="fas fa-home fa-2x" style="position: absolute"></i></a></li>
+                        <li class="nav-item"><a class="nav-link " aria-current="page" href="#"
+                                                style="font-family: 'Dancing Script SemiBold'">Admin Dashboard</a></li>
+                    </ul>
+                    <div class="menu_button">
+                        <i class="fas fa-bars"></i>
+                    </div>
+
+
+                    <div class="user-wrapper">
+                        <div class="search-wrapper">
+                            <span class="las la-search"></span>
+                            <input type="search" placeholder="Search here" />
+                        </div>
+                        <div class="noti">
+                            <img src="https://img.icons8.com/material-outlined/24/000000/appointment-reminders--v1.png" >
+                        </div>
+
+                        <div class="message">
+                            <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/000000/external-message-chat-flatart-icons-outline-flatarticons-6.png" width="25" height="25">
+                        </div>
+                        <img src="assests/img/WhatsApp%20Image%202021-06-22%20at%2018.26.58.jpeg" width="30px" height="30px" alt="">
+                        <div>
+                            <h6>Tharushi</h6>
+                            <small>Admin</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </section>
+</header>
+
+<main class="adminContent container-fluid">
+    <div class="row">
+        <div class="col-2 " id="leftDash">
+            <!-- Tab navs -->
+            <div class="nav flex-column nav-tabs text-lg-start overflow-hidden" id="v-tabs-tab" role="tablist"
+                 aria-orientation="vertical">
+                <a class="nav-link active" id="v-tabs-dash-tab" data-mdb-toggle="tab" href="#v-tabs-dash" role="tab"
+                   aria-controls="v-tabs-dash" aria-selected="true">
+<!--                    <i class="fas fa-home"></i> -->
+                    DASHBOARD</a>
+                <a class="nav-link" id="v-tabs-category-tab" data-mdb-toggle="tab" href="#v-tabs-categoryManage" role="tab"
+                   aria-controls="v-tabs-category" aria-selected="false">
+<!--                    <i class="fas fa-dolly"></i>-->
+                    Products Category</a>
+                <a class="nav-link" id="v-tabs-product-tab" data-mdb-toggle="tab" href="#v-tabs-product" role="tab"
+                   aria-controls="v-tabs-product" aria-selected="false">
+<!--                    <i class="fas fa-trailer"></i> -->
+                    Products</a>
+                <a class="nav-link" id="v-tabs-customer-tab" data-mdb-toggle="tab" href="#v-tabs-customer" role="tab"
+                   aria-controls="v-tabs-customer" aria-selected="false">
+<!--                    <i class="fas fa-user"></i>-->
+                    Customers</a>
+                <a class="nav-link" id="v-tabs-seller-tab" data-mdb-toggle="tab" href="#v-tabs-seller" role="tab"
+                   aria-controls="v-tabs-seller" aria-selected="false">
+<!--                    <i class="fas fa-user-tie"></i> -->
+                    Sellers</a>
+                <a class="nav-link" id="v-tabs-chart-tab" data-mdb-toggle="tab" href="#v-tabs-chart" role="tab"
+                   aria-controls="v-tabs-chart" aria-selected="false">
+<!--                    <i class="fas fa-shopping-cart"></i> -->
+                    Shopping Chart</a>
+                <a class="nav-link" id="v-tabs-checkout-tab" data-mdb-toggle="tab" href="#v-tabs-checkout" role="tab"
+                   aria-controls="v-tabs-checkout" aria-selected="false">
+<!--                    <i class="fas fa-archive"></i>-->
+                    Checkout</a>
+                <a class="nav-link" id="v-tabs-calender-tab" data-mdb-toggle="tab" href="#v-tabs-calender"
+                   role="tab"
+                   aria-controls="v-tabs-calender" aria-selected="false">
+<!--                    <i class="far fa-calendar-alt"></i> -->
+                    Calender</a>
+                <a class="nav-link" id="v-tabs-mail-tab" data-mdb-toggle="tab" href="#v-tabs-mail"
+                   role="tab"
+                   aria-controls="v-tabs-mail" aria-selected="false">
+<!--                    <i class="fas fa-envelope"></i> -->
+                    Email</a>
+
+            </div>
+            <!-- Tab navs -->
+        </div>
+        <div class="col-10 p-3">
+            <!-- Tab content -->
+            <div class="container-fluid">
+                <div class="tab-content" id="v-tabs-tabContent">
+                    <!--        Dashboard content start-->
+
+                    <div class="tab-pane fade show active" id="v-tabs-dash" role="tabpanel"
+                         aria-labelledby="v-tabs-dash-tab">
+<!--                        <div class="row text-center"><h1 class="h1 display-5">DashBoard</h1></div>-->
+                        <div class="row p-3">
+                            <div class="col-lg-3 col-6 overflow-hidden " id="c1">
+                                <div class="card " style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h6 class="card-title text-light text-center"><i class="fas fa-dollar-sign"></i>
+                                            SALES</h6>
+                                        <h6 class="card-subtitle  text-light display-6 mb-2 text-center" id="countCust">3,42,320</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-6 overflow-hidden " id="c2">
+                                <div class="card " style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h6 class="card-title text-light text-center"><i class="fas fa-balance-scale"></i>
+                                            EARNING</h6>
+                                        <h6 class="card-subtitle text-light display-6 mb-2 text-center" id="countAcars">$85,000</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-6 overflow-hidden " id="c3">
+                                <div class="card " style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h6 class="card-title text-light text-center"><i class="fas fa-dollar-sign"></i>
+                                           REVENUE</h6>
+                                        <h6 class="card-subtitle text-light display-6 mb-2 text-center" id="countADrivers">$6,543</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-6 overflow-hidden " id="c4">
+                                <div class="card " style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h6 class="card-title text-light text-center"><i class="fas fa-balance-scale"></i>
+                                            PROFIT</h6>
+                                        <h6 class="card-subtitle text-light display-6 mb-2 text-center" id="countNeedMaintainceC">
+                                            $25,000</h6>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="row"></div>
+
+                        <!--                        charts-->
+                        <div class="row">
+                            <div id="columnchart_material" style="width: 65%; min-width: 25%; height: 400px;"></div>
+<!--                            <div class="col-lg-7 col-xl-8">-->
+<!--                                <div class="card shadow mb-4">-->
+<!--                                    <div class="card-header d-flex justify-content-between align-items-center">-->
+<!--                                        <h6 class="text-black font-weight-bold m-0">MONTHLY INCOME</h6>-->
+<!--                                        <div class="dropdown no-arrow">-->
+<!--                                            <button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown"-->
+<!--                                                    aria-expanded="false" type="button"><i-->
+<!--                                                    class="fas fa-ellipsis-v text-gray-400"></i></button>-->
+<!--                                            <div class="dropdown-menu shadow dropdown-menu-right animated&#45;&#45;fade-in"-->
+<!--                                                 role="menu">-->
+<!--                                                <p class="text-center dropdown-header">dropdown header:</p><a-->
+<!--                                                    class="dropdown-item" role="presentation"-->
+<!--                                                    href="#">&nbsp;Action</a><a-->
+<!--                                                    class="dropdown-item" role="presentation" href="#">&nbsp;Another-->
+<!--                                                action</a>-->
+<!--                                                <div class="dropdown-divider"></div>-->
+<!--                                                <a class="dropdown-item" role="presentation" href="#">&nbsp;Something-->
+<!--                                                    else-->
+<!--                                                    here</a></div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="card-body">-->
+<!--                                        <div class="chart-area">-->
+<!--                                            <canvas data-bs-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Earnings&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;0&quot;,&quot;15000&quot;,&quot;10000&quot;,&quot;25000&quot;,&quot;20000&quot;,&quot;25000&quot;,&quot;10000&quot;,&quot;15000&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}]}}}"></canvas>-->
+<!--                                        </div>-->
+<!--                                        <div class="product">-->
+<!--                                            <h6 class="text-black font-weight-bold">PROFIT</h6>-->
+<!--                                        <div class="chart-area">-->
+<!--                                            <canvas data-bs-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Profit&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;0&quot;,&quot;10000&quot;,&quot;5000&quot;,&quot;25000&quot;,&quot;10000&quot;,&quot;15000&quot;,&quot;15000&quot;,&quot;10000&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}]}}}"></canvas>-->
+<!--                                        </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+
+                            <div class="col-lg-5 col-xl-4">
+                                <div class="card shadow mb-4">
+                                    <div class="card-header d-flex justify-content-between align-items-center">
+                                        <h6 class="text-dark font-weight-bold m-0">TOTAL SALES</h6>
+                                        <div class="dropdown no-arrow">
+                                            <button class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown"
+                                                    aria-expanded="false" type="button"><i
+                                                    class="fas fa-ellipsis-v text-gray-400"></i></button>
+
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="chart-area overflow-hidden" >
+                                            <div class="product">
+                                                <h9 class="text-black-50">Beds</h9>
+                                                <div class="progress" >
+                                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="product">
+                                                <h9 class="text-black-50">Bedroom Suites</h9>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-secondary" role="progressbar" style="width: 63%" aria-valuenow="63" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="product">
+                                                <h9 class="text-black-50">Sofa Sets</h9>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 69%" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="product">
+                                                <h9 class="text-black-50">Coffee Tables</h9>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="product">
+                                                <h9 class="text-black-50">Sofa Beds</h9>
+                                                <div class="progress" >
+                                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="product">
+                                                <h9 class="text-black-50">Office Tables</h9>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-info" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="product">
+                                                <h9 class="text-black-50">Dressing Tables</h9>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-dark" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="product">
+                                                <h9 class="text-black-50">Clothes Racks</h9>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="product">
+                                                <h9 class="text-black-50">Wooden Dinning Chairs</h9>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 50%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="product">
+                                                <h9 class="text-black-50">Wooden Dinning Suites</h9>
+                                                <div class="progress" >
+                                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 76%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="product">
+                                                <h9 class="text-black-50">Mattress</h9>
+                                                <div class="progress">
+                                                    <div class="progress-bar bg-info" role="progressbar" style="width: 85%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--    Dashboard content end-->
+                    <!--product section start-->
+                    <div class="tab-pane fade" id="v-tabs-product" role="tabpanel" aria-labelledby="v-tabs-product-tab">
+                        <div class="row ml-0 mr-0 text-center"><h1 class="h1 display-9">Product Manage</h1></div>
+                        <div class="productName">
+                            <p class="productText" >PRODUCT MANAGE </p>
+                            <p class="productAddressText" style="margin-left: 65%;">Admin > Dashboard > <b>Product Manage</b></p>
+                        </div>
+                        <aside class="product4to1" style="width: 50px; height: 50px; overflow: hidden;position: absolute; right: 360px; top: 290px;">
+                            <img id="output" src="" style="width:50px; height:50px; z-index: 0 ; overflow: hidden">
+                        </aside>
+                        <aside class="product4to2" style="width: 50px; height: 50px; overflow: hidden;position: absolute; right: 280px; top: 290px;">
+                            <img id="output1" src="" style="width:50px; height:50px; z-index: 0 ; overflow: hidden">
+                        </aside>
+                        <aside class="product4to3" style="width: 50px; height: 50px; overflow: hidden;position: absolute; right: 200px; top: 290px;">
+                            <img id="output2" src="" style="width:50px; height:50px; z-index: 0 ; overflow: hidden">
+                        </aside>
+                        <aside class="product4to4" style="width: 50px; height: 50px; overflow: hidden;position: absolute; right: 120px; top: 290px;">
+                            <img id="output3" src="" style="width:50px; height:50px; z-index: 0 ; overflow: hidden">
+                        </aside>
+                        <aside class="product4to5" style="width: 50px; height: 50px; overflow: hidden;position: absolute; right: 40px; top: 290px;">
+                            <img id="output4" src="" style="width:50px; height:50px; z-index: 0 ; overflow: hidden">
+                        </aside>
+                        <div class="row ml-0 mr-0 ">
+<!--                            <h3 class="h3  p-2 m-3 productTitle">Product Details</h3>-->
+                            <div class="col-3">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="productID" placeholder="Product ID : "
+                                           name="productid" >
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="productName" placeholder="Product Name" name=productName">
+                                </div>
+                            </div>
+                            <div class=" col-3 ">
+                                <select class="form-control" id="cmbCateType">
+                                    <option selected="selected" disabled="disabled">-Select Type-</option>
+                                    <span class="control-error" id="lblcatetype"></span>
+                                </select>
+                            </div>
+
+                            <div class=" col-2 ">
+                                <select class="form-control" id="cmbCategory">
+                                    <option selected="selected" disabled="disabled">-Select Ctegory-</option>
+                                    <span class="control-error" id="lblcategory"></span>
+                                </select>
+                            </div>
+                            <div class="col-3 col-sm-12 col-md-4 col-lg-4 col-xl-4 mt-1">
+
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">Added Date</span>
+
+                                        <input type="date" class="date" id="addedDate"
+                                               placeholder="Added Date" min="1">
+
+                                </div>
+                            </div>
+                            <div class="col-2 ">
+                                <input type="text" class="form-control" placeholder="Display Name"
+                                       id="productDisplayName" name="dName">
+                            </div>
+                            <div class="col-2 ">
+                                <input type="text" class="form-control" placeholder="Size"
+                                       id="productSize" name="size">
+                            </div>
+                            <div class="col-2 ">
+                                <input type="text" class="form-control" placeholder="Price(Rs.)"
+                                       id="productPrice" name="price">
+                            </div>
+
+                            <div class="col-4 ">
+                                <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Description"
+                                       id="productDescription" name="pDescription">
+                                </div>
+                            </div>
+                            <div class=" col-2 ">
+                                <select class="form-select" id="statusType">
+                                    <option selected="selected" disabled="disabled">-Product Status-</option>
+                                    <span class="control-error" id="lblStatus"></span>
+                                </select>
+                            </div>
+
+
+                        </div>
+
+                        <div class="row ml-0 mr-0 ">
+                            <div class="col-4">
+                                <div>
+                                    <input class="form-control" name="photo"  id="formFile" type="file" accept="image/*" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">
+                                </div>
+
+                            </div>
+                            <div class="col-4">
+                                <div>
+                                    <input class="form-control" name="photo2"  id="formFile1" type="file" accept="image/*" onchange="document.getElementById('output1').src = window.URL.createObjectURL(this.files[0])">
+                                </div>
+                            </div>
+
+                        <div class="col-4">
+                            <div>
+                                <input class="form-control" name="photo3"  id="formFile2" type="file" accept="image/*" onchange="document.getElementById('output2').src = window.URL.createObjectURL(this.files[0])">
+                            </div>
+                        </div>
+                            <div>
+
+                            </div>
+                            <div class="row ml-0 mr-0 ">
+                                <div class="col-4">
+                                    <div>
+                                        <input class="form-control" name="photo4"  id="formFile3" type="file" accept="image/*" onchange="document.getElementById('output3').src = window.URL.createObjectURL(this.files[0])">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div>
+                                        <input class="form-control" name="photo5"  id="formFile4" type="file" accept="image/*" onchange="document.getElementById('output4').src = window.URL.createObjectURL(this.files[0])">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-1">
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button type="button" class="btn btn-success mt-3 " id="saveProduct">Save</button>
+                                    <button type="button" class="btn btn-danger mt-3" id="delProduct">Delete</button>
+                                    <button type="button" class="btn btn-warning mt-3" id="updateProduct">Update</button>
+                                    <button type="button" class="btn btn-secondary mt-3" id="clearProduct">Clear</button>
+                                    <button type="button" class="btn btn-primary mt-3" id="btnCatGetAll">Get all</button>
+
+
+                                </div>
+                            </div>
+
+
+
+                        <!--                        search product-->
+<!--                        <div class="row ml-0 mr-0 mt-2 align-content-end">-->
+<!--                            <div class="col-md-4 offset-md-4">-->
+<!--                                <div class="input-group">-->
+<!--                                    <div class="form-outline">-->
+<!--                                        <input type="search" id="searchProduct" class="form-control"/>-->
+<!--                                        <label class="form-label" for="searchProduct">Search Product ID</label>-->
+<!--                                    </div>-->
+<!--                                    <button type="button" class="btn btn-primary" id="btnSearchProduct">-->
+<!--                                        <i class="fas fa-search"></i>-->
+<!--                                    </button>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+                        <!--                        product  table-->
+                        <div class="row overflow" >
+                            <table id="tblProduct" class="table table-hover table-striped table-bordered table-sm"
+                                   cellspacing="0" width="100%">
+                                <thead class="text-light" style="background: #23049D">
+                                <tr class="border-bottom-secondary">
+                                    <th>Product ID</th>
+                                    <th>Product Name</th>
+                                    <th>Category Type</th>
+                                    <th>Category</th>
+                                    <th>Added Date</th>
+                                    <th>Display Name</th>
+                                    <th>Size</th>
+                                    <th>Price(RS)</th>
+                                    <th>Description</th>
+                                    <th>Status</th>
+
+                                </tr>
+                                </thead>
+                                <tbody id="productTbody"></tbody>
+                            </table>
+                        </div>
+
+                        </div>
+                    </div>
+
+                    <!-- product details section end-->
+
+                    <!-- category  section start-->
+
+                    <div class="tab-pane fade" id="v-tabs-categoryManage" role="tabpanel" aria-labelledby="v-tabs-category-tab">
+                        <div class="row text-center"><h1 class="h1 display-9">Product Category Manage</h1></div>
+                        <div class="productName1">
+                            <p class="productText1" >CATEGORY MANAGE </p>
+                            <p class="productAddressText1" style="margin-left: 63%;">Admin > Dashboard > <b>Category Manage</b></p>
+                        </div>
+                        <div class="row ml-0 mr-0 ">
+<!--                            <h3 class="h3  p-2 m-3 categoryTilte">Product Categorisation</h3>-->
+                            <div class="col-4">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="categoryID"
+                                           placeholder="Category ID:(ex-C0001)" name="did">
+
+                                </div>
+                            </div>
+                            <div class="form-group col-4 ">
+                                <select class="form-control" id="cmbCategoryType">
+                                    <option selected="selected" disabled="disabled">-Category Type-</option>
+                                    <span class="control-error" id="lblcategorytype"></span>
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="categoryName"
+                                           placeholder="Category Name"
+                                           name="cName">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="description" placeholder="Description"
+                                           name="dcno">
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-4">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="displayName" placeholder="Product Display Name" name="displayName">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="availableBrand" placeholder="Available Brands"
+                                           name="brand">
+                                </div>
+                            </div>
+                            <div class=" col-3">
+                                <select class="form-select" id="CategoryStatus">
+                                    <option selected="selected" disabled="disabled">-Select Category Status-</option>
+                                    <span class="control-error" id="lblcategorystatus"></span>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="row m-3">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button type="button" class="btn btn-success mt-3 " id="saveCategory">Save</button>
+                                <button type="button" class="btn btn-danger mt-3" id="delCategory">Delete</button>
+                                <button type="button" class="btn btn-warning mt-3" id="updateCategory">Update</button>
+                                <button type="button" class="btn btn-primary mt-3" id="getAllCategory">Get All
+                                </button>
+                                <button type="button" class="btn btn-secondary mt-3" id="clearCategory">Clear</button>
+                            </div>
+                        </div>
+                        <!--                        category search-->
+<!--                        <div class="row ml-0 mr-0 m-2">-->
+<!--                            <div class="col-md-4 offset-md-4">-->
+<!--                                <div class="input-group m-5">-->
+<!--                                    <div class="form-outline ">-->
+<!--                                        <input type="search" id="searchCategory" class="form-control"/>-->
+<!--                                        <label class="form-label" for="searchCategory">Search Category By ID</label>-->
+<!--                                    </div>-->
+<!--                                    <button type="button" class="btn btn-primary" id="btnSearchCategory">-->
+<!--                                        <i class="fas fa-search"></i>-->
+<!--                                    </button>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                        </div>-->
+                        <!-- category table-->
+                        <div class="row overflow">
+
+                            <table class="table table-hover table-striped table-bordered table-sm " cellspacing="0"
+                                   width="100%" id="tblCategory">
+                                <thead class="text-light" style="background: #04009A">
+                                <tr class="border-bottom-secondary">
+                                    <th>Category ID</th>
+                                    <th> Category Type</th>
+                                    <th> Category Name</th>
+                                    <th>Description</th>
+                                    <th>Display Name</th>
+                                    <th>Available Brands</th>
+                                    <th>Availability</th>
+                                </tr>
+                                </thead>
+                                <tbody id="categoryTbody">
+
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                    </div>
+
+                    <!-- category section end-->
+                    <!--product section start-->
+                    <div class="tab-pane fade" id="v-tabs-customer" role="tabpanel" aria-labelledby="v-tabs-customer-tab">
+                        <div class="row ml-0 mr-0 text-center"><h1 class="h1 display-9">Product Manage</h1></div>
+
+                            <div class="productName">
+                                <p class="productText" >PRODUCT MANAGE </p>
+                                <p class="productAddressText" style="margin-left: 65%;">Admin > Dashboard > <b>Product Manage</b></p>
+                            </div>
+
+                        <div class="row ml-0 mr-0 ">
+<!--                            <h3 class="h3  p-2 m-3 productTitle">Product Details</h3>-->
+                            <div class="col-3">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="productID1" placeholder="Product ID : "
+                                           name="productid1" >
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="productName1" placeholder="Product Name" name=productName">
+                                </div>
+                            </div>
+                            <div class=" col-3 ">
+                                <select class="form-control" id="cmbCateType1">
+                                    <option selected="selected" disabled="disabled">-Select Type-</option>
+                                    <span class="control-error" id="lblcatetype1"></span>
+                                </select>
+                            </div>
+
+                            <div class=" col-2 ">
+                                <select class="form-control" id="cmbCategory1">
+                                    <option selected="selected" disabled="disabled">-Select Ctegory-</option>
+                                    <span class="control-error" id="lblcategory1"></span>
+                                </select>
+                            </div>
+                            <div class="col-3 col-sm-12 col-md-4 col-lg-4 col-xl-4 mt-1">
+
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">Added Date</span>
+
+                                    <input type="date" class="date" id="addedDate1"
+                                           placeholder="Added Date" min="1">
+
+                                </div>
+                            </div>
+                            <div class="col-2 ">
+                                <input type="text" class="form-control" placeholder="Display Name"
+                                       id="productDisplayName1" name="dName">
+                            </div>
+                            <div class="col-2 ">
+                                <input type="text" class="form-control" placeholder="Size"
+                                       id="productSize1" name="size">
+                            </div>
+                            <div class="col-2 ">
+                                <input type="text" class="form-control" placeholder="Price(Rs.)"
+                                       id="productPrice1" name="price">
+                            </div>
+
+                            <div class="col-4 ">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Description"
+                                           id="productDescription1" name="pDescription">
+                                </div>
+                            </div>
+                            <div class=" col-2 ">
+                                <select class="form-select" id="statusType1">
+                                    <option selected="selected" disabled="disabled">-Product Status-</option>
+                                    <span class="control-error" id="lblStatus1"></span>
+                                </select>
+                            </div>
+
+
+                        </div>
+
+                        <div class="row ml-0 mr-0 ">
+
+
+
+
+                            <div class="row m-1">
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button type="button" class="btn btn-success mt-3 " id="saveProduct1">Save</button>
+                                    <button type="button" class="btn btn-danger mt-3" id="delProduct1">Delete</button>
+                                    <button type="button" class="btn btn-warning mt-3" id="updateProduct1">Update</button>
+                                    <button type="button" class="btn btn-secondary mt-3" id="clearProduct1">Clear</button>
+                                    <button type="button" class="btn btn-primary mt-3" id="btnCatGetAll1">Get all</button>
+
+
+                                </div>
+                            </div>
+
+
+
+
+
+                            <!--                        product  table-->
+                            <div class="row overflow" >
+                                <table id="tblProduct1" class="table table-hover table-striped table-bordered table-sm"
+                                       cellspacing="0" width="100%">
+                                    <thead class="text-light" style="background: #23049D">
+                                    <tr class="border-bottom-secondary">
+                                        <th>Product ID</th>
+                                        <th>Product Name</th>
+                                        <th>Category Type</th>
+                                        <th>Category</th>
+                                        <th>Added Date</th>
+                                        <th>Display Name</th>
+                                        <th>Size</th>
+                                        <th>Price(RS)</th>
+                                        <th>Description</th>
+                                        <th>Status</th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody id="productTbody1"></tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- product details section end-->
+
+
+
+
+                </div>
+        </div>
+    </div>
+
+</div>
+</main>
+<footer class="container-fluid footer bg-dark">
+    <h6 class="text-center text-muted mt-3"> Copyright © 2020 All right reserved</br> Website Powered BY ABC Furniture Company
+        </h6>
+</footer>
+<script src="assests/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
+<script src="assests/js/bootstrap.min.js"></script>
+<script>
+
+
+    var navbar = document.getElementById("navSection");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+
+        if (window.pageYOffset >= sticky) {
+            console.log(sticky + 'in');
+            navbar.classList.add('sticky');
+        } else {
+            navbar.classList.remove('sticky');
+            console.log(sticky);
+
+        }
+
+    }
+
+</script>
+
+
+<script src="assests/sweetalert/sweetalert2.all.min.js"></script>
+<script src="assests/js/chart.min.js"></script>
+<script src="assests/bs-init.js"></script>
+<script src="controller/CategoryController.js"></script>
+<script src="controller/ProductController.js"></script>
+<script src="controller/Product.js"></script>
+<script src="controller/LoginController.js"></script>
+
+</body>
+</html>
